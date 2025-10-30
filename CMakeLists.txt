@@ -27,11 +27,17 @@ SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 INCLUDE(FetchContent)
 FetchContent_Declare(
   googletest
-  URL https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz
+  URL https://github.com/google/googletest/archive/refs/tags/v1.17.0.tar.gz
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 SET(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
+
+FetchContent_Declare(
+  benchmark
+  URL https://github.com/google/benchmark/archive/refs/tags/v1.9.4.tar.gz
+)
+FetchContent_MakeAvailable(benchmark)
 
 ADD_EXECUTABLE(leapfrog src/leapfrog.cc)
 TARGET_INCLUDE_DIRECTORIES(leapfrog PRIVATE src)

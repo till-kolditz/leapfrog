@@ -42,6 +42,6 @@
 
 # custom
 /.cache
-/build
+/build*
 /Testing
 /target
