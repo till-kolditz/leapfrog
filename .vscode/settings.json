@@ -1,5 +1,7 @@
 {
     "clangd.arguments": [
         "--compile-commands-dir=${workspaceFolder}/build/"
-    ]
+    ],
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "makefile.compileCommandsPath": "${workspaceFolder}/build/compile_commands.json"
 }
